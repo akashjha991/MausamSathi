@@ -31,24 +31,7 @@ function AdSenseAd({ adSlot, adFormat = "auto", fullWidthResponsive = true, adSt
   );
 }
 
-// Fallback Ad Component (in case AdSense doesn't load)
-function FallbackAd({ darkMode, position }) {
-  const ads = [
-    {
-      title: "Krishi Yantra Store",
-      description: "Premium farming equipment at best prices",
-      image: "🚜",
-      cta: "Shop Now",
-      color: "from-green-500 to-green-700"
-    },
-    {
-      title: "Organic Seeds",
-      description: "High-yield certified organic seeds",
-      image: "🌱",
-      cta: "Order Today",
-      color: "from-emerald-500 to-emerald-700"
-    }
-  ];
+
 
   const ad = ads[position % ads.length];
 
@@ -188,7 +171,6 @@ export default function Home() {
             adSlot="5770442596"
             adStyle={{ marginBottom: '20px' }}
           />
-          <FallbackAd darkMode={darkMode} position={0} />
         </div>
       </aside>
 
@@ -279,7 +261,6 @@ export default function Home() {
             adSlot="3017136807"
             adStyle={{ marginBottom: '20px' }}
           />
-          <FallbackAd darkMode={darkMode} position={1} />
         </div>
       </aside>
     </div>
