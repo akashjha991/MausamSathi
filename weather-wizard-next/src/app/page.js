@@ -1,35 +1,35 @@
 "use client";
 import { useEffect, useState } from "react";
 
-// AdSense Component
-function AdSenseAd({ adSlot, adFormat = "auto", fullWidthResponsive = true, adStyle = {} }) {
-  useEffect(() => {
-    try {
-      // Initialize AdSense ads
-      if (typeof window !== 'undefined' && window.adsbygoogle) {
-        window.adsbygoogle.push({});
-      }
-    } catch (error) {
-      console.error('AdSense error:', error);
-    }
-  }, []);
+// // AdSense Component
+// function AdSenseAd({ adSlot, adFormat = "auto", fullWidthResponsive = true, adStyle = {} }) {
+//   useEffect(() => {
+//     try {
+//       // Initialize AdSense ads
+//       if (typeof window !== 'undefined' && window.adsbygoogle) {
+//         window.adsbygoogle.push({});
+//       }
+//     } catch (error) {
+//       console.error('AdSense error:', error);
+//     }
+//   }, []);
 
-  return (
-    <ins
-      className="adsbygoogle"
-      style={{
-        display: 'block',
-        width: '160px',
-        height: '600px',
-        ...adStyle
-      }}
-      data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" // Replace with your AdSense Publisher ID
-      data-ad-slot={adSlot}
-      data-ad-format={adFormat}
-      data-full-width-responsive={fullWidthResponsive}
-    />
-  );
-}
+//   return (
+//     <ins
+//       className="adsbygoogle"
+//       style={{
+//         display: 'block',
+//         width: '160px',
+//         height: '600px',
+//         ...adStyle
+//       }}
+//       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX" // Replace with your AdSense Publisher ID
+//       data-ad-slot={adSlot}
+//       data-ad-format={adFormat}
+//       data-full-width-responsive={fullWidthResponsive}
+//     />
+//   );
+// }
 
 
 
@@ -66,21 +66,21 @@ export default function Home() {
 
   const apiKey = "163f3d7e07ceb73bf55e63b2c8bd78a8";
   
-  // Load AdSense script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX'; // Replace with your Publisher ID
-    script.async = true;
-    script.crossOrigin = 'anonymous';
-    document.head.appendChild(script);
+  // // Load AdSense script
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX'; // Replace with your Publisher ID
+  //   script.async = true;
+  //   script.crossOrigin = 'anonymous';
+  //   document.head.appendChild(script);
 
-    return () => {
-      // Cleanup script on component unmount
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     // Cleanup script on component unmount
+  //     if (document.head.contains(script)) {
+  //       document.head.removeChild(script);
+  //     }
+  //   };
+  // }, []);
   
   useEffect(() => {
     if (navigator.geolocation) {
@@ -152,15 +152,15 @@ export default function Home() {
       )}
 
       {/* Left Ad Space */}
-      <aside className="hidden lg:block col-span-2">
-        <div className="w-full h-full flex flex-col items-center pt-10 space-y-4">
-          <AdSenseAd 
-            adSlot="1234567890" // Replace with your ad slot ID
-            adStyle={{ marginBottom: '20px' }}
-          />
-          <FallbackAd darkMode={darkMode} position={0} />
-        </div>
-      </aside>
+      // <aside className="hidden lg:block col-span-2">
+      //   <div className="w-full h-full flex flex-col items-center pt-10 space-y-4">
+      //     <AdSenseAd 
+      //       adSlot="1234567890" // Replace with your ad slot ID
+      //       adStyle={{ marginBottom: '20px' }}
+      //     />
+      //     <FallbackAd darkMode={darkMode} position={0} />
+      //   </div>
+      // </aside>
 
       {/* Main Content */}
       <div className="col-span-12 lg:col-span-8 flex flex-col items-center z-10">
@@ -243,15 +243,15 @@ export default function Home() {
       </div>
 
       {/* Right Ad Space */}
-      <aside className="hidden lg:block col-span-2">
-        <div className="w-full h-full flex flex-col items-center pt-10 space-y-4">
-          <AdSenseAd 
-            adSlot="0987654321" // Replace with your ad slot ID
-            adStyle={{ marginBottom: '20px' }}
-          />
+      // <aside className="hidden lg:block col-span-2">
+      //   <div className="w-full h-full flex flex-col items-center pt-10 space-y-4">
+      //     <AdSenseAd 
+      //       adSlot="0987654321" // Replace with your ad slot ID
+      //       adStyle={{ marginBottom: '20px' }}
+      //     />
           
-        </div>
-      </aside>
+      //   </div>
+      // </aside>
     </div>
   );
 }
