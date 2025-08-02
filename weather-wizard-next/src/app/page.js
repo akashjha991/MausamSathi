@@ -33,29 +33,29 @@ import { useEffect, useState } from "react";
 
 
 
-  const ad = ads[position % ads.length];
+  // const ad = ads[position % ads.length];
 
-  return (
-    <div className={`w-[160px] min-h-[200px] rounded-lg shadow-lg overflow-hidden ${darkMode ? "bg-gray-800" : "bg-white"} mb-4`}>
-      <div className={`bg-gradient-to-r ${ad.color} p-3 text-white text-center`}>
-        <div className="text-2xl mb-1">{ad.image}</div>
-        <h3 className="text-sm font-bold">{ad.title}</h3>
-      </div>
-      <div className={`p-3 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
-        <p className="text-xs mb-3 leading-relaxed">{ad.description}</p>
-        <button className={`w-full py-2 px-3 rounded text-xs font-semibold transition-colors ${
-          darkMode 
-            ? "bg-blue-600 text-white hover:bg-blue-700" 
-            : "bg-blue-500 text-white hover:bg-blue-600"
-        }`}>
-          {ad.cta}
-        </button>
-      </div>
-      <div className={`px-3 pb-2 ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
-        <span className="text-xs">Sponsored</span>
-      </div>
-    </div>
-  );
+  // return (
+  //   <div className={`w-[160px] min-h-[200px] rounded-lg shadow-lg overflow-hidden ${darkMode ? "bg-gray-800" : "bg-white"} mb-4`}>
+  //     <div className={`bg-gradient-to-r ${ad.color} p-3 text-white text-center`}>
+  //       <div className="text-2xl mb-1">{ad.image}</div>
+  //       <h3 className="text-sm font-bold">{ad.title}</h3>
+  //     </div>
+  //     <div className={`p-3 ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
+  //       <p className="text-xs mb-3 leading-relaxed">{ad.description}</p>
+  //       <button className={`w-full py-2 px-3 rounded text-xs font-semibold transition-colors ${
+  //         darkMode 
+  //           ? "bg-blue-600 text-white hover:bg-blue-700" 
+  //           : "bg-blue-500 text-white hover:bg-blue-600"
+  //       }`}>
+  //         {ad.cta}
+  //       </button>
+  //     </div>
+  //     <div className={`px-3 pb-2 ${darkMode ? "text-gray-500" : "text-gray-400"}`}>
+  //       <span className="text-xs">Sponsored</span>
+  //     </div>
+  //   </div>
+  // );
 
 
 export default function Home() {
