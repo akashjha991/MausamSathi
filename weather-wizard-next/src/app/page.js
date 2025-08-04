@@ -274,10 +274,18 @@ export default function Home() {
       {/* Right Ad Space */}
       <aside className="hidden lg:block col-span-2">
         <div className="w-full h-full flex flex-col items-center pt-10 space-y-4">
-          <AdSenseAd 
-            adSlot="3017136807"
-            adStyle={{ marginBottom: '20px' }}
-          />
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2351040456899601"
+     crossorigin="anonymous"></script>
+<!-- Weather App Right Sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2351040456899601"
+     data-ad-slot="3017136807"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
       </aside>
     </div>
